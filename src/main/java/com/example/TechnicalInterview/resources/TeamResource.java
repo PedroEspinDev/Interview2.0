@@ -1,16 +1,17 @@
 package com.example.TechnicalInterview.resources;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.*;
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Validated
 @Builder
 @Getter
 @Setter
 public class TeamResource {
-
+    private Long id;
     @NotBlank(message = "name is required")
     private String name;
 
